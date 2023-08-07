@@ -41,10 +41,10 @@ const resolvers = {
             throw new AuthenticationError('You need to be logged in!');
         },
         login: async (parent, { email, password }) => {
-            // find the user with the given username
-            const user = await User.findOne({username});
+            // find the user with the given email
+            const user = await User.findOne({email});
             // if the user does not exist send message "Incorrect username or password"
-            if(!user){return json({message: "Incorrect username or password"})}
+            if(!user){return json({message: "Incorrect email or password"})}
 
             // check the sent password with the user's saved password
             const checkPsswd = await user.isCorrectPassword(password);
