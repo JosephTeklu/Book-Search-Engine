@@ -5,7 +5,7 @@ const secret = "mysecretssh";
 const expiration = "2h";
 
 module.exports = {
-  autthMiddleware: function ({ req }){
+  authMiddleware: function ({ req }){
     // setup token by either the request body query or headers
     let token = req.body.token || req.query.token || req.headers.authorization;
     // if the token is made through the header fix the string
@@ -20,6 +20,7 @@ module.exports = {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;
     } catch (error) {console.log("Invalid Token");}
+    return req;
   },
   signToken: function({ username, password, _id}){
     // setup the payload with the user's username and their password
