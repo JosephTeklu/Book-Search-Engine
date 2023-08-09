@@ -12,7 +12,7 @@
 ## Installation 
   Clone the repo to your machine. Run ``` npm i``` to install neede dependicies in the root directory. Then run ``` npm run develop``` in the root directory to start up the react webpage. 
 ## Usage 
-  Head over to the heroku deployed webpage found here ``` HEROKU``` and make an accout. Afterwards look up a book and save it to your account.
+  Head over to the heroku deployed webpage found here ``` https://book-search-engine-j-c04341341de3.herokuapp.com/``` and make an accout. Afterwards look up a book and save it to your account.
 ## Contributing 
   No contributions necessary at this time
 ## Tests 
